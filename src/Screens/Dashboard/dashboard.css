@@ -1,0 +1,126 @@
+.dashboard-screen {
+  background-color: black;
+  height: 100vh;
+}
+
+.dasboard-system {
+  margin-top: 50px;
+  padding: 15px;
+  position: relative;
+  height: 70vh;
+}
+
+.processor {
+  position: absolute;
+  display: inline-block;
+  top: 270px;
+  right: 70px;
+  width: 200px;
+  height: 120px;
+  border: 1px solid;
+  text-align: center;
+  border-radius: 8px;
+  background-color: transparent;
+  color: red;
+}
+
+.processor .process {
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.dashboard-screen .header {
+  position: relative;
+  height: 70px;
+  border-bottom: 2px solid red;
+}
+
+.dashboard-screen .header .interrupt-type {
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+}
+
+.dashboard-screen .header .total-processes {
+  position: absolute;
+  right: 10px;
+  width: 30%;
+  padding-left: 40px;
+  bottom: 5px;
+  border-left: 2px solid red;
+}
+
+.dashboard-screen .footer {
+  position: relative;
+  height: 50px;
+  font-size: 140%;
+}
+
+.dashboard-screen .footer .status {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.dashboard-screen .footer .status .click-interrrupt {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.dashboard-screen .footer .status .click-interrrupt:hover {
+  font-weight: bolder;
+}
+
+.dashboard-screen .footer .time-latency {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.dashboard-screen .interrrupt-handled-images {
+  position: absolute;
+  left: 220px;
+  top: 15px;
+}
+
+.dashboard-screen .interrrupt-handled-images img {
+  height: 180px;
+}
+
+.dashboard-screen .process-interrrupted-images {
+  position: absolute;
+  right: 200px;
+  top: 50px;
+}
+
+.dashboard-screen .process-interrrupted-images img {
+  height: 200px;
+}
+
+.dashboard-screen .process-dispatched-images {
+  position: absolute;
+  left: 450px;
+  top: 210px;
+}
+
+.dashboard-screen .process-dispatched-images img {
+  height: 90px;
+  width: 560px;
+}
+
+.dashboard-screen .process-timout-images {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+}
+
+.dashboard-screen .process-timout-images img {
+  height: 90px;
+  width: 560px;
+}
+
+.info-model.process-model .ant-modal-close{
+  display: none !important;
+}

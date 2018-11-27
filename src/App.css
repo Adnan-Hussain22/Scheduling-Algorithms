@@ -1,0 +1,13 @@
+.header{
+    height: 120px;
+    background-color: #2E8FFF;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.header .heading{
+    text-align: center;
+
+}

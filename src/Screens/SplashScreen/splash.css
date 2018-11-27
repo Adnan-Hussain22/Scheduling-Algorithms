@@ -1,0 +1,56 @@
+.splash-screen {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-screen .btn-start {
+  visibility: hidden;
+}
+
+.splash-screen .loader-container {
+  padding: 2px;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  border-color: red;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.splash-screen .loader-container p {
+  background: transparent;
+  color: white;
+  position: absolute;
+  bottom: -10px;
+  font-weight: bolder;
+}
+
+.splash-screen .loader-container .loader {
+  height: 40px;
+  background-color: red;
+  width: 0px;
+}
+
+.splash-screen .btn-start {
+  position: absolute;
+  top: 65%;
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background: none;
+  border: 2px solid red;
+  color: white;
+  font-weight: bolder;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.splash-screen .btn-start:hover {
+  background-color: red;
+}

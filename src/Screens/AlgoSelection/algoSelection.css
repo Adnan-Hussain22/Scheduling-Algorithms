@@ -1,0 +1,173 @@
+.interrrupt-selection {
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+.interrrupt-selection .header {
+  height: 100vh;
+  margin-top: 90%;
+  background-color: red;
+  transition: 0.9s;
+  color: red;
+  font-weight: bolder;
+  padding: 15px;
+  text-align: center;
+}
+
+.interrrupt-selection .header.animationEnd {
+  color: white;
+}
+
+.interrrupt-selection .selection {
+  margin: auto;
+  margin-top: 40px;
+  width: 85%;
+  padding: 10px;
+}
+
+.interrrupt-selection .selection .interrupt-type {
+  font-size: 140%;
+  color: white;
+  font-weight: initial;
+  text-align: center;
+  border-bottom: dotted red;
+  width: 32%;
+  margin: auto;
+}
+
+.interrrupt-selection .selection .border-vertical {
+  font-size: 140%;
+  height: 120px;
+  width: 1px;
+  border-left: dotted red;
+  margin: auto;
+  margin-top: 12px;
+}
+
+.interrrupt-selection .selection .border-container {
+  width: 45%;
+  height: 120px;
+  margin: auto;
+  margin-top: 10px;
+  border-top: dotted;
+  border-right: dotted;
+  border-left: dotted;
+  border-color: red;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.interrrupt-selection .selection .interrupt-options {
+  width: 85%;
+  height: 40px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 130%;
+  font-weight: 1000;
+  color: white;
+}
+
+.interrrupt-selection .selection .interrupt-options .software-interrupt,
+.interrrupt-selection .selection .interrupt-options .hardware-interrupt {
+  position: absolute;
+  width: 40%;
+  text-align: center;
+  border-bottom: dotted red;
+  cursor: pointer;
+}
+
+.interrrupt-selection .selection .interrupt-options .software-interrupt {
+  left: 30px;
+}
+
+.interrrupt-selection .selection .interrupt-options .hardware-interrupt {
+  right: 30px;
+}
+
+.process-container .input-processes {
+  border: none;
+  padding: 0px;
+  width: 85%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.process-model .ant-modal-header {
+  background-color: transparent;
+  height: 90px;
+  border: none;
+}
+
+.process-model .ant-modal-header .ant-modal-title {
+  visibility: hidden;
+}
+
+.process-model .ant-modal-close {
+  border-radius: 50%;
+  background-color: transparent;
+  right: -90px;
+  font-weight: bolder;
+  color: red;
+  border: 2px solid red;
+  transition: 0.4s;
+}
+
+.process-model .ant-modal-close:hover {
+  color: black;
+  background-color: red;
+}
+
+.process-model .ant-modal-content {
+  position: relative;
+  background-color: transparent;
+}
+
+.process-model .ant-modal-body {
+  background-color: transparent;
+  border: none;
+}
+
+.process-container .input-processes input {
+  border: none !important;
+  padding: 5px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid red !important;
+  box-shadow: none;
+  color: white;
+  font-weight: bolder;
+}
+
+.process-container button {
+  height: 35px;
+  width: 50px;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bolder;
+  background-color: red;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.process-container button:hover {
+  color: red;
+  background-color: transparent;
+  border: 2px solid red;
+}
+
+.process-container button:focus{
+  box-shadow: none;
+}
+
+.process-container .input-processes input:focus {
+  box-shadow: none;
+  border-color: red;
+}
+
+.process-container .input-processes .dots {
+  display: inline-block;
+  margin: 0px;
+  position: absolute;
+}
