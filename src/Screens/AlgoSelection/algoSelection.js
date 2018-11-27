@@ -2,8 +2,6 @@ import React from "react";
 import { Modal, Button, Input } from "antd";
 import "antd/dist/antd.css";
 import "./algoSelection.css";
-import $ from "jquery";
-const Search = Input.Search;
 class InterruptSelection extends React.Component {
   constructor(props) {
     super(props);

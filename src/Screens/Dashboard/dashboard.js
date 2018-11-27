@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 import Queue from "../../Helpers/Queue/Queue";
 import { QueueContainer } from "../../Components";
 import "./dashboard.css";
-import { toast, ToastContainer } from "react-toastify";
 import {
   ProcessArrivedDark,
   ProcessArrivedLight,
@@ -13,7 +12,6 @@ import {
   ProcessTimeoutDark,
   ProcessTimeoutLight
 } from "../../Helpers/Assets";
-import "react-toastify/dist/ReactToastify.css";
 export default class Dasboard extends React.Component {
   constructor(props) {
     super(props);
@@ -150,97 +148,6 @@ export default class Dasboard extends React.Component {
     }
   };
 
-  // handleBlockProcess = () => {
-  //   const { Primary_Queue, Ready_Queue, processor } = this.state;
-  //   console.log("Blocking Process");
-  //   if (processor) {
-  //     Primary_Queue.Enqueue(processor);
-  //     let status = Ready_Queue.Dequeue();
-  //     this.setState({
-  //       Primary_Queue,
-  //       processor: null,
-  //       Ready_Queue,
-  //       blockqueueActive: true
-  //     });
-  //     setTimeout(() => {
-  //       this.setState({ blockqueueActive: false });
-  //     }, 2000);
-  //     if (status)
-  //       setTimeout(() => {
-  //         this.handleDispatchingToProcessor(status);
-  //       }, 400);
-  //     console.log(`Blocked Queue********`);
-  //     console.log(Primary_Queue);
-  //   }
-  // };
-
-  // handleReleaseProcess = () => {
-  //   const { Primary_Queue, Ready_Queue } = this.state;
-  //   console.log("releaseBlockedProcesses******");
-  //   if (Primary_Queue.Count()) {
-  //     const blocked = Primary_Queue.Dequeue();
-  //     this.setState({ interruptHandledActive: true });
-  //     setTimeout(() => {
-  //       this.setState({ interruptHandledActive: false });
-  //     }, 700);
-  //     Ready_Queue.Enqueue(blocked);
-  //     // this.handleCreateNotification(
-  //     //   "info",
-  //     //   `${blocked.processName} Released From Block Queue`
-  //     // );
-  //     console.log("Releasing Process " + blocked.processName);
-  //   }
-  // };
-
-  handleCreateNotification = (type, message) => {
-    switch (type) {
-      case "info": {
-        toast.info(message, {
-          position: "bottom-left",
-          autoClose: 2000,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: false
-        });
-        break;
-      }
-      case "success": {
-        toast.success(message, {
-          position: "bottom-left",
-          autoClose: 2000,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: false
-        });
-        break;
-      }
-      case "warning": {
-        toast.warn(message, {
-          position: "bottom-left",
-          autoClose: 2000,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: false
-        });
-        break;
-      }
-      case "error": {
-        toast.error(message, {
-          position: "bottom-left",
-          autoClose: 2000,
-          hideProgressBar: true,
-          closeOnClick: false,
-          pauseOnHover: true,
-          draggable: false
-        });
-        break;
-      }
-    }
-  };
-
    // Method to check the system status
   handlecheckSystemStatus = () => {
     const { Ready_Queue, Primary_Queue, processor } = this.state;
@@ -308,16 +215,10 @@ export default class Dasboard extends React.Component {
                 text="Primary Queue"
                 name="block-queue"
               />
-              {/* <div className="process-interrrupted-images">
-                {!blockqueueActive && <img src={BlockQueueInterruptLight} />}
-                {blockqueueActive && <img src={BlockQueueInterruptDark} />}
-              </div> */}
             </div>
           )}
           {this.renderProcessor(processor)}
-          {/* {this.renderBlockMessage()} */}
         </div>
-        {/* {this.renderFooter()} */}
         <Modal
           className="info-model process-model"
           visible={this.state.systemEnd}
@@ -350,33 +251,6 @@ export default class Dasboard extends React.Component {
     );
   };
 
-  renderFooter = () => {
-    return (
-      <div className="footer">
-        <div className="status">
-          <div style={{ color: "red" }}>
-            <span
-              style={{
-                fontWeight: "bolder"
-              }}
-            >
-              Status:
-            </span>
-            <span
-              className="click-interrrupt"
-              onClick={this.handleBlockProcess}
-            >
-              Click to interrupt process
-            </span>
-          </div>
-        </div>
-        <div className="time-latency">
-          <div style={{ color: "red" }}>Time Latency : 5 sec</div>
-        </div>
-      </div>
-    );
-  };
-
   renderProcessor(process) {
     return (
       <div className="processor">
@@ -392,28 +266,4 @@ export default class Dasboard extends React.Component {
       </div>
     );
   }
-
-  renderBlockMessage() {
-    return (
-      <h3
-        style={{
-          position: "absolute",
-          bottom: "30px",
-          left: "500px"
-        }}
-      />
-    );
-  }
-
-  // blinker() {
-  //   const blinker = document.getElementById("blink-message");
-  //   blinker.style.visibility = "visible";
-  //   setInterval(() => {
-  //     console.log("Blinking");
-  //     console.log(blinker.style.visibility)
-  //     if (blinker.style.visibility === "visible")
-  //       blinker.style.visibility = "hidden";
-  //     else blinker.style.visibility = "visible";
-  //   }, 500);
-  // }
 }
